@@ -408,4 +408,27 @@ if Pregunta == "SI":
 else:
     print("3.¿no prefieres los aviones?" "¿Entonces TIENES MIEDO A LAS ALTURAS?")
     
-  
+#3.1 Input-2
+pregunta = 'Agrega un numero y te diré si es par o impar \r\n'
+pregunta += ' (Escribe "cerrar" para salir de la aplicación) \r\n'
+Preguntar = True
+
+while Preguntar:
+
+#Mezclarlo con operadores
+    numero = input(pregunta)
+
+
+    if numero == 'cerrar':
+        preguntar = False
+    else:
+
+
+        numero = int(numero)
+
+    if numero % 2 == 0:
+        print(f'El número {numero} es par')
+    else:
+        print(f'El número {numero} es impar')
+        
+#3.2 
