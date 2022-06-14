@@ -1,0 +1,411 @@
+#1.0 Hola mundo
+print('Hola Mundo')
+
+#1.1 variables
+hola_mundo = 'Hola Mundo'
+
+print('Hola Mundo')
+
+#1.2 Reto 1
+#Crear una variable con tu canción favorita
+cancion_fav = 'Overwhelmed'
+
+#Imprimir canción favorita
+print('Overwhelmed')
+
+#Crear una variable de la última comida
+ultima_comida = 'pizza'
+
+#Imprimir última comida
+print('pizza')
+
+#Utilizar print() para mostrar cada una de estás variables (1 por linea)
+print()
+
+#1.3 Tipos de Datos
+
+#Crear una variable con tu canción favorita
+cancion_fav = 'Overwhelmed'
+
+#Imprimir canción favorita
+print('Overwhelmed')
+
+#Crear una variable de la última comida
+ultima_comida = 'pizza'
+
+#Imprimir última comida
+print('pizza')
+
+#Utilizar print() para mostrar cada una de estás variables (1 por linea)
+print()
+
+1.4 Funciones-1
+def informacion():
+    print('Soy Jaime')
+    print('Soy cagauau')
+
+informacion()
+informacion()
+informacion()
+informacion()
+
+#1.5 funciones-2
+def informacion(nombre, puesto = 'desconocido'):
+    print(f'Soy {nombre} y soy {puesto}')
+
+informacion('Jaime', 'Programador')
+informacion('Itzel', 'Diseñadora')
+informacion('Caguau', 'Programador')
+informacion('Tuit')
+
+#1.6 Funciones-3
+def informacion(nombre):
+    return nombre
+
+#empleado tendrá la información pasada a información()
+empleado = informacion('Jaime')
+print(empleado)
+
+#1.7 Funciones-4
+nombre = 'Jaime'
+
+def mostrar_nombre(nombre):
+    print(f'Hola {nombre}')
+
+mostrar_nombre(nombre)
+
+print(nombre.upper())
+
+print(nombre.title())
+
+#1.8 reto2
+#Crear una función que imprima un mensaje de bienvenida
+#Crear una función que tome un nombre de un usuario y lo muestre como mensaje de bienvenida
+#Crear una función que tome la última que hiciste
+
+nombre = 'Jaime'
+
+def mostrar_nombre(nombre):
+    print(f'Bienvenido a python {nombre}')
+
+mostrar_nombre(nombre)
+
+def informacion():
+    print('Tomar un cafe')
+informacion()
+
+#1.9 Números 
+#Números enteros
+print(2)
+print(4)
+
+#Flotantes
+print(2.5)
+
+#Operadores
+print( 2 + 3)
+print( 8 - 4)
+print(1 * 4)
+print(10 / 3)
+
+print( 4 ** 3) # 4 x 4 = 16 x 4 = 64
+print( 3 ** 3) # 3 x 3 = 9 x 3 = 27
+
+# El parantesis se resolverá primero
+print((2 + 3) * 4)
+
+numero = 20
+print(numero)
+
+#incremento x 2
+numero += 5
+print(numero)
+
+#Suma de enteros y flotantes
+print( 4 + 2.9)
+
+#2.0 numeros-1
+def suma():
+    print(2 + 2)
+
+suma()
+
+def suma(a = 0,  b = 0, c = 0):
+    print(a + b + c)
+
+suma(2, 3, 6)
+
+def resta(a, b):
+    print(a - b)
+
+resta( 10, 8)
+
+#2.1 Reto 3
+#Realizar función para crear multiplicación
+
+#Realizar función para crearuna división
+
+def multiplicacion(a = 0, b = 0):
+    print(a * b)
+
+multiplicacion(64, 5)
+
+def division(a = 0, b = 0):
+    print(a / b)
+
+division(125, 5)
+
+#2.2 list
+lenguajes = ['Python', 'kotlin', 'Java', 'Javascript']
+
+print(lenguajes)
+
+# Los arrays (lists) comienzan en la posición 0
+print(lenguajes[0]) #python
+
+#Ordenar los elementos
+lenguajes.sort()
+print(lenguajes)
+
+#Acceder a un elemento dentro de un texto
+aprendiendo = f'Estoy aprendiendo {lenguajes[3]}'
+print(aprendiendo)
+
+# Modificando valores de un arreglo
+lenguajes[2] = 'PHP'
+print(lenguajes)
+
+#Agrerar elementos a un arreglo (list)
+lenguajes.append('Ruby')
+print(lenguajes)
+
+#Eliminar de un arreglo (list)
+del lenguajes[1]
+print(lenguajes)
+
+#eliminar de un arreglo (list)
+lenguajes.pop() #Eliminar el último elemento
+print(lenguajes)
+
+#Eliminar con pop una posición en especdico
+lenguajes.pop(0)
+print(lenguajes)
+
+#Eliminar por nombre
+lenguajes.remove('PHP')
+print(lenguajes)
+
+#2.3 iteradores
+lenguajes = ['Python', 'kotlin', 'Java', 'Javascript', 'Ruby', 'GO']
+
+# Iterador
+for lenguaje in lenguajes:
+    print(f'Estoy aprendiendo {lenguaje}')
+
+#For que escribe numeros
+for numero in range(0, 10, 3):
+    print(numero)
+  
+#2.4 Condicionales
+# Revisar si una condicional es mayor a 
+balance = 500
+if balance > 501:
+    print('Puedes pagar')
+
+balance = 500
+if balance > 0:
+    print('Puedes pagar')
+else:
+    print('No tienes saldo')
+
+
+#Likes 
+likes = 200
+if likes >= 200:
+    print('Excelente, 200 Likes')
+
+else:
+    print('Casi llegas a los 200')
+
+#IF con texto
+lenguaje = 'PHP'
+if not lenguaje == 'Python':
+    print('Excelente decisión')
+
+#Evaluar un Boolean
+usuario_autenticado = True
+
+if usuario_autenticado:
+    print('Acceso al sistema')
+else:
+    print('Debes iniciar sesión')
+    
+#2.4 Condicionales-2
+# Evaluar un elemento de la lista
+lenguajes = ['Python', 'kotlin', 'Java', 'Javascript', 'PHP']
+if 'PHP' in lenguajes:
+    print('PHP Si existe')
+else:
+    print('No, no esta en la lista')
+
+#If anidados
+usuario_autenticado = False
+usuario_admin = False
+
+if usuario_autenticado:
+    if usuario_admin:
+        print('ACCESO TOTAL')
+    else:
+        print('Acceso al sistema')
+else:
+    print('Debes iniciar sesión')
+    
+# 2.5 Condicionales-3
+#Ejemplo con elif
+ocupacion = 'Nada'
+
+if ocupacion == 'Estudiante':
+    print('Tienes 50% de Descuento')
+elif ocupacion == 'Jubilado':
+    print('Tienes 75% de descuento')
+elif ocupacion == 'Desempleado':
+    print('Tienes un 10% de descuento')
+else:
+    print('Debes pagar el 100%')
+    
+#2.6 Condicionales-4
+#Operadores and y or
+
+usuario_logueado = True
+usuario_admin = True
+if usuario_logueado or usuario_admin:
+    print('Administrador')
+elif usuario_logueado:
+    print('Acceso al sistema')
+else:
+    print('Debes Iniciar sesión')
+
+
+usuario_logueado = True
+usuario_admin = True
+if usuario_logueado and usuario_admin:
+    print('Administrador')
+elif usuario_logueado:
+    print('Acceso al sistema')
+else:
+    print('Debes Iniciar sesión')
+    
+#2.7 Condicionales-5
+lenguajes = ['Python', 'kotlin', 'Java', 'Javascript']
+for lenguaje in lenguajes:
+   if lenguaje == 'Python':
+    print(lenguaje.upper())
+else:
+    print(lenguaje)
+    
+#2.8 Diccionarios
+# Creando un diccionario simple
+cancion = {
+    'artista' : 'electronica', #llave y valot
+   'cancion' : 'motivation',
+   'lanzamiento' : 2015,
+   'likes' : 3000
+}
+
+#Acceder a los elementos del diccionario
+print(cancion['artista'])
+print(cancion['lanzamiento'])
+
+#Mezclar con un string
+artista = cancion['artista']
+print(f'Estoy escuchando a {artista}')
+
+print(cancion)
+
+#agrerar nuevos valores
+cancion['playlit'] = 'electronica'
+print(cancion)
+
+#Reemplazar valor existente
+cancion['cancion'] = 'overwhelmed'
+print(cancion)
+
+#Eliminar un valor
+del cancion['lanzamiento']
+print(cancion)
+
+#2.9 Diccionarios 2
+#Iniciar un diccionario vacio
+jugador = {}
+print(jugador)
+
+#Se une un jugador
+jugador['nombre'] = 'Jaime'
+jugador['puntaje'] = 100
+print(jugador)
+
+#Incrementar el puntaje
+jugador['puntaje'] = 200
+print(jugador)
+
+#Acceder a un valor
+print(jugador.get('consola', 'No existe ese valor'))
+
+#Iterar en el diccionario
+for llave, valor in jugador.items():
+    print(llave)
+    print(valor)
+
+#Eliminar jugador y puntaje
+del jugador['nombre']
+del jugador['puntuaje']
+print(jugador)
+
+#3.0 Input
+#nombre = input('Cuál es tu nombre: \r\n')
+#print(f'Hola {nombre}')
+
+# Leer datos que serán numeros
+edad = input('Cual es tu edad? \r\n')
+#convertir edad (string) a int
+edad = int(edad)
+
+if edad >= 18:
+    print('Ya puedes votar')
+else:
+    print('Aún no puedes votar')
+
+#Mezclrarlo con operadores
+numero = input('Agrega un numero y te diré si es par o impar \r\n')
+numero = int(numero)
+
+if numero % 2 == 0:
+    print(f'El número {numero} es par')
+else:
+    print(f'El número {numero} es impar')
+   
+#Reto 3
+##1. ¿Te gustan las motos?
+##2. ¿Prefieres los coches?
+##3. ¿O los aviones?
+
+Pregunta = input('¿Te gustan las motos? \r\n')
+if Pregunta == "SI":
+    print('1.¿Te gustan las motos?''Alma motera, como yo :D')
+else:
+    print('1.No sabes nada de motos ¿verdad? ._.')
+
+
+Pregunta = input('¿Prefieres los coches? \r\n')
+if Pregunta == "SI":
+    print('2.¿Prefieres los coches?''Debo de admitir que los JDM son los más guapos')
+else:
+    print("2.¿No prefieres los coches?" "¿Entonces te gustan las motos o los aviones, no?")
+
+Pregunta = input('¿Prefieres los aviones? \r\n')
+if Pregunta == "SI":
+    print('3.¿Prefieres los aviones?''Eso si que realmente esta guapo')
+else:
+    print("3.¿no prefieres los aviones?" "¿Entonces TIENES MIEDO A LAS ALTURAS?")
+    
+  
