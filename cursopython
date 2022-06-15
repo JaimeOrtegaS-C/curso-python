@@ -515,3 +515,143 @@ restaurant2.mostrar_informacion()
 #Mostrar la información
 print(f'nombre Restaurant: {restaurant.nombre}')
 print(f'nombre Restaurant: {restaurant2.nombre}')
+
+# 3.4 Clases-2
+class Restaurant:
+
+    def __init__(self, nombre, categoria, precio):
+       self.nombre = nombre #Atributo
+       self.categoria = categoria
+       self.precio = precio
+
+    def mostrar_informacion(self):
+        print(f'Nombre: {self.nombre}, Categoría {self.categoria}, Precio {self.precio}')
+
+#Instanciar clase
+restaurant = Restaurant('Pizzeria Lana', 'Comida Italina', 50)
+restaurant.mostrar_informacion()
+
+
+restaurant2 = Restaurant('Hamburgesas python', 'Comida Casual', 20)
+restaurant2.mostrar_informacion()
+
+#3.5 clases 3 
+class Restaurant:
+
+    def __init__(self, nombre, categoria, precio):
+        self.nombre = nombre #Atributo
+        self.categoria = categoria
+        self.__precio = precio #Default: Public, PROTECTED(solo una barra baja"_"), PRIVATE(Dos barra baja"__")
+        
+    def mostrar_informacion(self):
+        print(f'Nombre: {self.nombre}, Categoría: { self.categoria }, Precio: {self.__precio}')
+
+    # GETTERS Y SETTERS - Get = Obtiene un valor, SET = Agrera un valor
+    def get_precio(self):
+        return self.__precio
+
+    def set_precio(self, precio):
+         self.__precio = precio
+
+
+#Instanciar clase
+restaurant = Restaurant('Pizzeria Lana', 'Comida Italiana', 50)
+#restaurant.__precio = 80 #No será posible modificarlo con Private
+restaurant.mostrar_informacion()
+restaurant.set_precio(80)
+precio = restaurant.get_precio()
+print(precio)
+
+restaurant2 = Restaurant('Hamburgesas python', 'Comida Casual', 20)
+restaurant2.mostrar_informacion()
+restaurant2.set_precio(40)
+restaurant2.get_precio()
+
+#3.6 Clase 4
+class Restaurant:
+
+    def __init__(self, nombre, categoria, precio):
+        self.nombre = nombre #Atributo
+        self.categoria = categoria
+        self.__precio = precio #Default: Public, PROTECTED(solo una barra baja"_"), PRIVATE(Dos barra baja"__")
+        
+    def mostrar_informacion(self):
+        print(f'Nombre: {self.nombre}, Categoría: { self.categoria }, Precio: {self.__precio}')
+
+    # GETTERS Y SETTERS - Get = Obtiene un valor, SET = Agrera un valor
+    def get_precio(self):
+        return self.__precio
+
+    def set_precio(self, precio):
+         self.__precio = precio
+
+
+# Crear una clase hijo de Resturant
+class Hotel(Restaurant):
+    def __init__(self, nombre, categoria, precio):
+        super().__init__(nombre, categoria, precio)
+
+hotel = Hotel('Hotel POO', '5 Estrellas', 200)
+hotel.mostrar_informacion()
+
+#3.7 Clase 5
+class Restaurant:
+
+    def __init__(self, nombre, categoria, precio):
+        self.nombre = nombre #Atributo
+        self.categoria = categoria
+        self.precio = precio #Default: Public, PROTECTED(solo una barra baja"_"), PRIVATE(Dos barra baja"__")
+        
+    def mostrar_informacion(self):
+        print(f'Nombre: {self.nombre}, Categoría: { self.categoria }, Precio: {self.precio}')
+
+    # GETTERS Y SETTERS - Get = Obtiene un valor, SET = Agrera un valor
+    def get_precio(self):
+        return self.precio
+
+    def set_precio(self, precio):
+         self.precio = precio
+
+
+# Crear una clase hijo de Resturant
+class Hotel(Restaurant):
+    def __init__(self, nombre, categoria, precio, alberca):
+        super().__init__(nombre, categoria, precio)
+        self.alberca = alberca
+
+#Reescribir un metodo (debe de llamarse igual)
+    def mostrar_informacion(self):
+        print(f'Nombre: {self.nombre}, Categoría: { self.categoria }, Precio: {self.precio}, Alberca: {self.alberca}')
+
+    #Agregar un metodo que solo exista en hotel
+    def get_alberca(self):
+        return self.alberca
+hotel = Hotel('Hotel POO', '5 Estrellas', 200, 'Si')
+hotel.mostrar_informacion()
+alberca = hotel.get_alberca()
+print(alberca)
+
+#3.8 Archvos
+def app():
+    # Crear el archivo
+    archivo = open('archivo.txt', 'w') # w es escritura, si no existe lo creará
+
+    #Generar numeros en archivo
+    for i in range(0, 20):
+        archivo.write('Esta es la linea ' + str(i) + "\r\n" )
+
+    # Cerrar el archivo
+    archivo.close()
+
+
+app()
+
+#3.9 Archivos 2
+def app():
+
+    with open('archivo.txt') as archivo:
+        for contenido in archivo:
+            print (contenido.rstrip())
+
+#4.0 Proyecto final
+app()
